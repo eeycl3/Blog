@@ -1,0 +1,143 @@
+﻿# Hexo Configuration
+## Docs: http://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: Chi要成为很牛的程序员
+subtitle: 既不潇洒，也不平庸
+description: 从中国飘到英国，再从英国飘到加拿大。BEng, University of Nottingham. MEng,University of Waterloo. Incoming SDE of Amazon  
+author: Chi Liu
+email: Chi_Liu@hotmail.com
+keywords: "程序猿，Dancer，喜欢Hipa，Java，Full-stack，Python，Spring，AWS"
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: chinoliu.com
+root: /
+permalink: :year/:month/:day/:title/
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+highlight:                                                                                                                                                                                                   
+  enable: true                                                                                                                                                                                               
+  auto_detect: true                                                                                                                                                                                          
+  line_number: true                                                                                                                                                                                          
+  tab_replace: ''
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+  寂寞寂寞就好: lonesome-peak
+tag_map:
+
+# Archives
+## 2: Enable pagination
+## 1: Disable pagination
+## 0: Fully Disable
+archive: 1
+category: 1
+tag: 1
+
+# Server
+## Hexo uses Connect as a server
+## You can customize the logger format as defined in
+## http://www.senchalabs.org/connect/logger.html
+port: 4000
+server_ip: localhost
+logger: false
+logger_format: dev
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 8
+pagination_dir: page
+
+# Disqus
+disqus_shortname: chis-blog-1
+
+# Extensions
+## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
+## Themes: https://github.com/hexojs/hexo/wiki/Themes
+# plugins:
+#  - hexo-generator-feed
+#  - hexo-generator-baidu-sitemap
+#  - hexo-generator-sitemap
+# Plugins
+
+index_generator:
+  per_page: 5 ##首页默认5篇文章标题，如果值为0不分页
+archive_generator:
+  per_page: 20 ##归档页面默认20篇文章标题，如果值为0不分页
+  yearly: true ##生成年视图
+  monthly: true ##生成月视图
+tag_generator:
+  per_page: 20 ##标签页面默认20篇文章，如果值为0不分页
+category_generator: 
+  per_page: 20 ##分类页面默认20篇文章，如果值为0不分页
+
+theme: yilia
+exclude_generator:
+
+# Deployment
+## Docs: http://hexo.io/docs/deployment.html
+#deploy:
+#  type: git
+#  repository: git@github.com:litten/litten.github.com.git
+#  branch: master
+
+deploy:
+  type: git
+  repo: https://github.com/eeycl3/eeycl3.github.io.git
+  branch: master
+
+sitemap:
+    path: sitemap.xml
+baidusitemap:
+    path: baidusitemap.xm
+
+feed:
+    type: atom
+    path: atom.xml
+    limit: 100
+
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true
