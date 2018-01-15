@@ -21,19 +21,18 @@ categories: 建站
 
 ##### **建立Github Page**
 
-1. 建立一个repo
+建立一个repo
 
-   ​	去Github 建立一个repository 叫做 <u>***username.github.io***</u> 然后username就是你github 的username。
+   去Github 建立一个repository 叫做 <u>***username.github.io***</u> 然后username就是你github 的username。
 
-   ​
 
-2. 复制你的repo到你的terminal
+复制你的repo到你的terminal
 
 ```bash
 $ git clone https://github.com/username/username.github.io
 ```
 
-3.  Hello world
+Hello world
 ```bash
 $ cd username.github.io
 $ echo "Hello World" > index.html
@@ -59,7 +58,6 @@ $ git push -u origin master
 ##### 安装前提
 
 安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：
-
 - [Node.js](http://nodejs.org/)
 - [Git](http://git-scm.com/)
   如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 npm 即可完成 Hexo 的安装。
@@ -77,7 +75,7 @@ $ hexo g # 或者hexo generate
 $ hexo s # 或者hexo server，可以在http://localhost:4000/ 查看
 ```
 
-#####发表新文章
+##### 发表新文章
 
 用hexo发表新文章
 
