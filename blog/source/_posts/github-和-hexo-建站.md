@@ -21,31 +21,29 @@ categories: 建站
 
 ##### **建立Github Page**
 
-建立一个repo
+（1）建立一个repo
 
    去Github 建立一个repository 叫做 <u>***username.github.io***</u> 然后username就是你github 的username。
 
-
-复制你的repo到你的terminal
-
+（2）复制你的repo到你的terminal
 ```bash
 $ git clone https://github.com/username/username.github.io
 ```
 
-Hello world
+（3）Hello world
 ```bash
 $ cd username.github.io
 $ echo "Hello World" > index.html
 ```
 
-4.  Push it
+（4）Push it
 ```bash
 $ git add --all
 $ git commit -m "Initial commit"
 $ git push -u origin master
 ```
 
-5.  访问 **https://username.github.io** 你的网站建好了！
+（5）访问 **https://username.github.io** 你的网站建好了！
 
 
 
@@ -68,6 +66,7 @@ $ sudo npm install -g hexo-cli
 
 ##### 安装hexo
 ```bash
+$ sudo npm install -g hexo-cli
 $ sudo hexo init blog
 $ cd blog
 $ sudo npm install
@@ -78,7 +77,6 @@ $ hexo s # 或者hexo server，可以在http://localhost:4000/ 查看
 ##### 发表新文章
 
 用hexo发表新文章
-
 ```bash
 $ hexo n "article title" #写文章 
 ```
@@ -88,24 +86,18 @@ $ hexo n "article title" #写文章
 这里以主题hexo-theme-yilia为例进行说明。
 
 安装主题，在blog 目录下
-
 ```bash
 $ hexo clean
 $ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia
 ```
 
 启用主题
-
 修改Hexo博客目录下的_config.yml配置文件中的theme属性，将其设置为yilia
-
 ```latex
 theme: yilia 
 ```
 
-
-
 更新主题
-
 ```bash
 $ cd themes/yilia
 $ git pull
@@ -124,7 +116,6 @@ $ hexo s # 启动本地web服务器， 我就把本地服务器当成一个beta�
 ##### 使用hexo deploy部署到Github page
 
 hexo deploy可以部署到很多平台，具体可以参考这个[链接](https://hexo.io/zh-cn/docs/deployment.html). 如果部署到github，需要在配置文件_config.xml中作如下修改：
-
 ```latex
 deploy:
    type: git
@@ -133,7 +124,6 @@ deploy:
 ```
 
 然后在命令行中执行
-
 ```bash
 $ hexo deploy # 发送到你的blog 站点上
 ```
@@ -176,7 +166,7 @@ $ sudo npm install hexo-deployer-git --save
 
 很重要的一点哇，你要记得给你的hexo 也加CNAME
 
-在source文件夹中新建一个CNAME文件（无后缀名），然后用文本编辑器打开，在首行添加你的网站域名，如[chinoliu.com](chinoliu.com)，注意前面没有http://，也没有www，然后使用hexo g && hexo d上传部署。
+在source文件夹中新建一个CNAME文件（无后缀名），然后用文本编辑器打开，在首行添加你的网站域名，如[chinoliu.com](chinoliu.com)，注意前面没有 http，也没有www，然后使用hexo g && hexo d上传部署。
 
 ## Other
 
