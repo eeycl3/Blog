@@ -1,12 +1,14 @@
 ---
+toc: true
 title: spring boot + mongoDB + heroku 构建一个小型文件储存系统
-date: 2018-01-17 00:12:00
+date: 2018-01-19 00:12:00
 tags:
  - spring boot
  - mongoDB
  - heroku
 categories: java
 ---
+
 ## Introduction：
 
 ### 需求：
@@ -323,7 +325,7 @@ public class FileServiceImpl implements FileService {
 }
 ```
 
-###Repo(Dao)
+### Repo(Dao)
 
 ```java
 package com.blogpic.fileserver.repository;
@@ -500,20 +502,18 @@ public class FileController {
      */
     @PostMapping("/delete")
     public String deleteFile(@RequestParam String id, RedirectAttributes redirectAttributes) {
- 
     	try {
 			fileService.removeFile(id);
 		} catch (Exception e) {
-            redirectAttributes.addFlashAttribute("message",
-                    "Fail to delete file with id: " + id);
+            redirectAttributes.addFlashAttribute("message", "Fail to delete file with id: " + id);
             return "redirect:/";
 		}
-        redirectAttributes.addFlashAttribute("message",
-                "Succeed to delete file with id: " + id);
+        redirectAttributes.addFlashAttribute("message", "Succeed to delete file with id: " + id);
         return "redirect:/";
     }
 }
 ```
+
 ## Final
 ![](https://floating-waters-18924.herokuapp.com/files/5a6261715c2f8e0004eff88f)
 

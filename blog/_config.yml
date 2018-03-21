@@ -40,6 +40,10 @@ highlight:
   line_number: true                                                                                                                                                                                          
   tab_replace: ''
 
+auto_excerpt:
+  enable: true
+  length: 50
+
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -100,13 +104,6 @@ category_generator:
 
 theme: yilia
 exclude_generator:
-
-# Deployment
-## Docs: http://hexo.io/docs/deployment.html
-#deploy:
-#  type: git
-#  repository: git@github.com:litten/litten.github.com.git
-#  branch: master
 
 deploy:
   type: git
